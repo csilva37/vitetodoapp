@@ -4,10 +4,10 @@ import axios from 'axios'
 const todos = ref([])
 
 const api = axios.create({
-  baseURL: 'https://api.silvacarlos.com/api/todos',
+   baseURL: import.meta.env.VITE_API_URL,
   params: {
-    username: 'admin',
-    password: 'admin',
+    username: import.meta.env.VITE_API_USERNAME,
+    password: import.meta.env.VITE_API_PASSWORD,
   },
 })
 
